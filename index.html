@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Template</title>
+    <title>Pig! The Dice Game</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -20,8 +20,27 @@
 
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
+      <h1>Pig! The Dice Game</h1>
+      <div class="nameInput">
+        <h2>Player Names</h2>
+      </div>
+      <div class="row">
+        <div id="player1" class="col-sm-6">
+          <h2><span class="player1Name"></span></h2>
+          <span id="player1roll" class="btn btn-primary">Roll</span>
+          <div id="player1Active">
 
+          </div>
+        </div>
+        <div id="player2" class="col-sm-6">
+          <h2><span class="player2Name"></span></h2>
+          <span id="player2roll" class="btn btn-primary">Roll</span>
+          <div id="player2Active">
 
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
