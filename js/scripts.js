@@ -11,20 +11,19 @@ function Player(name, totalScore, turn, runningTally) {
   this.runningTally = runningTally;
 }
 
-var winCheck = function() {
-  if (player1.totalScore >= 100) {
-    alert("Player 1 Wins!");
-  } else if (player2.totalScore >= 100) {
-    alert("Player 2 Wins!");
+Player.prototype.winCheck = function() {
+  if (this.totalScore >= 100)  {
+    alert(this.name + " Wins!");
   }
 }
 
-var player1 = new Player("Player 1", 0, 0, 0);
-var player2 = new Player("Player 2", 0, 0, 0);
+
 
 // Front End Logic
 
 $(document).ready(function(){
+  var player1 = new Player("Player 1", 0, 0, 0);
+  var player2 = new Player("Player 2", 0, 0, 0);
 
   $('#player1roll').click(function() {
     var roll = dieRoll();
@@ -34,19 +33,16 @@ $(document).ready(function(){
     } else {
       player1.runningTally += roll;
       $('#player1Active').html(player1.runningTally);
-      console.log(player1.runningTally);
     }
   }); //End Player 1 Click Event
 
   $('#player1hold').click(function() {
-    player1.totalScore += player1.runningTally;
+    player1.totalScore += player1.runningTally; //Prototype
     $('#player1Total').html(player1.totalScore);
     player1.runningTally = 0;
     $('#player1Active').html(player1.runningTally);
-    console.log(player1.runningTally);
-    winCheck();
+    player1.winCheck();
   });
-  console.log(player1.runningTally);
 
   $('#player2roll').click(function() {
     var roll = dieRoll();
@@ -60,10 +56,10 @@ $(document).ready(function(){
   }); //End Player 1 Click Event
 
   $('#player2hold').click(function() {
-    player2.totalScore += player2.runningTally;
+    player2.totalScore += player2.runningTally; //Prototype
     $('#player2Total').html(player2.totalScore);
     player2.runningTally = 0;
     $('#player2Active').html(player2.runningTally);
-    winCheck();
+    player2.winCheck();
   });
 }); //End Document.Ready Function
