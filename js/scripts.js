@@ -9,7 +9,7 @@ function Player(name, totalScore, turn, runningTally, human) {
   this.totalScore = totalScore;
   this.turn = turn;
   this.runningTally = runningTally;
-  this.human = human || true;
+  this.human = human;
 }
 
 Player.prototype.winCheck = function() {
@@ -18,16 +18,27 @@ Player.prototype.winCheck = function() {
   }
 }
 
-// function disableButton1() {
-//      document.getElementById("player1roll").disabled = false;
-// }
 
 
 // Front End Logic
 
 $(document).ready(function(){
   var player1 = new Player("Player 1", 0, 0, 0);
-  var player2 = new Player("Player 2", 0, 0, 0);
+  var player2 = new Player("Player 2", 0, 0, 0, false);
+
+  // var computer = function() {
+  //   var roll = dieRoll();
+  //   for (var i = 0; i < 3; i++) {
+  //     if ( roll === 1) {
+  //       $('#player2hold').trigger('click');
+  //       console.log(roll);
+  //       var roll = 0;
+  //     } else {
+  //       $('#player2roll').trigger('click');
+  //     }
+  //   }
+  //   $('#player2hold').trigger('click');
+  // }
 
   $('#player1roll').click(function() {
     $('#player2roll').hide();
@@ -52,7 +63,18 @@ $(document).ready(function(){
     $('#player1roll').hide();
     $('#player2roll').show();
     player1.winCheck();
+
+    // if (player2.human === false) {
+      // computer();
+    // }
   });
+
+// Player.prototype.roll = function() {
+//   var roll = dieRoll();
+//   if (roll === 1) {
+//     this.runningTally = 0;
+//   }
+// }
 
   $('#player2roll').click(function() {
     $('#player1roll').hide();
