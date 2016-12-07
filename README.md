@@ -20,27 +20,39 @@ To use the code, you can clone the repository at [https://github.com/jryanconkli
 ## Specifications
 
 1. It can take a die roll.
+
 -Input Example: 1
+
 -Output Example: Turn Ends
 
 2. A Die is Rolled
+
 -Input Example: [2-6]
+
 -Output Example: Score Tallied, Given Option to Hold or Continue
 
 3. On Continue - Roll Again
+
 -Input Example: 1
+
 -Output Example: Turn Ends, Score is Cleared
 
 4. On Continue - Roll Again
+
 -Input Example: [2-6]
+
 -Output Example: Score Tallied, Given Option to Hold or Continue
 
 5. On Hold Selected
+
 -Input Example: Enter
+
 -Output Example: Score is Pushed to Player Score Total
 
 6. Score is 100 or More
+
 -Input Example: Player score >= 100
+
 -Output Example: Game ends.
 
 
