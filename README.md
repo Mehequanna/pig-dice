@@ -2,43 +2,46 @@
 Pig Dice
 
 ## Features
-Allows a player to play Pig the dice game against a computer.
+Allows a player to play the Pig Dice game against another player.
 
-##Technologies
+![screenshot of project](pigdice.png)
+
+## Technologies
 JavaScript, JQuery, BootStrap, HTML and CSS
 
 ## Usage
 To view the site, you can go to https://mehequanna.github.io/pig-dice.
+
 To use the code, you can clone the repository at [https://github.com/jryanconklin/pig-dice](https://github.com/jryanconklin/pig-dice).
 
-Download the repository.
-Open index.html in your browser.
+1. Download the repository.
+2. Open index.html in your browser.
 
 ## Specifications
 
-* It can take a die roll.
+1. It can take a die roll.
 - Input Example: 1
 - Output Example: Turn Ends
 
-* A Die is Rolled
+2. A Die is Rolled
 - Input Example: [2-6]
 - Output Example: Score Tallied, Given Option to Hold or Continue
 
-* On Continue - Roll Again
+3. On Continue - Roll Again
 - Input Example: 1
 - Output Example: Turn Ends, Score is Cleared
 
-* On Continue - Roll Again
+4. On Continue - Roll Again
 - Input Example: [2-6]
 - Output Example: Score Tallied, Given Option to Hold or Continue
 
-* On Hold Selected
+5. On Hold Selected
 - Input Example: Enter
 - Output Example: Score is Pushed to Player Score Total
 
-* Score is 100 or More
-- Input Example: Computer or Player score >= 100
-- Output Example: Game ends, player or computer wins.
+6. Score is 100 or More
+- Input Example: Player score >= 100
+- Output Example: Game ends.
 
 
 ## Author/s
