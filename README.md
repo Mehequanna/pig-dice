@@ -59,6 +59,6 @@ To use the code, you can clone the repository at [https://github.com/jryanconkli
 ## Author/s
 Stephen Emery & J. Ryan Conklin
 
-##License
+## License
 This work can be used under the MIT License.
 Copyright (c) 2016 J. Ryan Conklin & Stephen Emery
